@@ -7,17 +7,20 @@
 # you are doing it wrong :(
 
 # Build the following methods on the customer class
-  # Customer.all
-  # Customer.find_by_name(name)
-  # Customer#add_review
-  # Customer#add_restaurant
+  ## Customer.all
+  ## Customer.find_by_name(name)
+  ## Customer#add_review
 
-  # Review.all
-  # Review#customer
-  # Review#restaurant
+  ## Review.all
+  ## Review#customer
+  ## Review#restaurant
 
-  # Restaurant.all
-  # Restaurant.find_by_name(name)
-  # Restaurant#reviews
-  # Restaurant#customers
-    # should return all of the customers who have written reviews.
+  ## Restaurant.all
+  ## Restaurant.find_by_name(name)
+  ## Restaurant#reviews
+  ## Restaurant#customers
+    ## should return all of the customers who have written reviews.
+
+    a Restaurant has many reviews and customer through reviews
+    a Review belongs to a customer and a Restaurant
+    a Customer has many reviews and resturants through reviews

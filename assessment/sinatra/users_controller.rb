@@ -3,19 +3,39 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
-  # /users/new
+  get '/users/new'
 
-  # create
+  def create
+    @user = User.create(params)
+  end
+  post '/users'
 
-  # index
+  def index
+    @users = User.all
+  end
+  get '/users'
 
-  # show
+  def show
+    @user = User.find(params[:id])
+  end
+  get '/users/:id'
 
-  # edit
+  def edit
+    @user = User.find(params[:id])
+  end
+  get '/users/:id'
 
-  # update
+  def update
+    @user = User.update(params)
+  end
+  patch '/users/:id'
 
-  # destroy
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.delete
+  end
+  delete '/users/:id'
 
 end
 

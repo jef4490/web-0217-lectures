@@ -23,7 +23,18 @@ class Customer
     SQL
     self.class.db.execute(sql, self.id)
   end
+
+   def reviews
+     sql = <<-SQL
+     SELECT * FROM reviews
+     WHERE customer_id = ?
+     SQL
+     self.class.db.execute(sql, self.id)
+   end
+
 end
+
+# Customer#reviews
 
 
 # customer = Customer.all.first

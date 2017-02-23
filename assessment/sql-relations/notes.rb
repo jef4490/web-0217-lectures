@@ -23,7 +23,17 @@ id | name |
 # - Then do the has_many
 # - If there is a many to many, we need a third table
 
-# Write your answer here.
+reviews
+id | comments | customer_id | restaurant_id
+
+customers
+id | name
+
+restaurants
+id | name | owner_id
+
+owners
+id | name
 
 # 2. As a second step, please fill in the stubbed out methods in the respective model.
 # Customer#reviews
@@ -31,3 +41,10 @@ id | name |
 # Restaurant#owner
 # Review#customer
 # Review#restaurant
+
+
+
+
+
+
+# gist assesment *.rb
