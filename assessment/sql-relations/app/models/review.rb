@@ -26,7 +26,7 @@ class Review
     SELECT * FROM restaurants
     WHERE id = ?
     SQL
-    self.class.db.execute(sql, self.restaurant.id)
+    self.class.db.execute(sql, self.restaurant_id)
   end
 
 end
