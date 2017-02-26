@@ -23,7 +23,7 @@ class UsersController < ApplicationController
   def edit
     @user = User.find(params[:id])
   end
-  get '/users/:id'
+  get '/users/:id/edit'
 
   def update
     @user = User.update(params)
